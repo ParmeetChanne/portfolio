@@ -19,7 +19,7 @@ body {
 }
 
 .header {
-  margin-top: -2rem !important;
+  margin-top: -1.5rem !important;
   z-index: 1;
   color: white;
   font-size: 3.5rem;
@@ -54,12 +54,30 @@ body {
 .nav_element_2 {
   color: white;
   text-decoration: none;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
 }
 .nav_element_3 {
   color: white;
   text-decoration: none;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
+}
+
+.arrow {
+  display: flex;
+  opacity: 1;
+  transform: translate(0px, 0px);
+  -webkit-transition: 0.4s ease all;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  justify-content: center;
+  color: white;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
 }
 
 /********** Splash Screen **********/
