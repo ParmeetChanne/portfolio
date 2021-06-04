@@ -15,3 +15,27 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 4500);
   });
 });
+
+var d = new Date();
+var months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+Number.prototype.pad = function (digits) {
+  for (var n = this.toString(); n.length < digits; n = 0 + n);
+  return n;
+};
+
+document.getElementById("datee").innerHTML = months[d.getMonth()];
+document.getElementById("month").innerHTML = d.getDate().pad(2);
