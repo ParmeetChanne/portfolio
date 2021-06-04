@@ -140,7 +140,7 @@ body {
   padding-top: 8rem;
   padding-left: 9rem;
   position: relative;
-  margin-bottom: 24rem;
+  margin-bottom: 21rem;
 }
 
 .description svg {
@@ -154,6 +154,7 @@ body {
   .description {
     padding-top: 7rem;
     padding-left: 0rem;
+    margin-bottom: 16rem;
   }
 
   .description svg {
@@ -259,6 +260,13 @@ body {
   margin-top: 7rem;
 }
 
+@media screen and (max-width: 768px) {
+  .projects {
+    margin-top: 0rem;
+    padding-top: 0rem;
+  }
+}
+
 .project_header1 {
   color: white;
   font-size: 8rem;
@@ -292,18 +300,46 @@ body {
 
 .firstproject img {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-left: 3rem;
 }
 
 @media screen and (max-width: 768px) {
   .firstproject {
     margin-left: 0rem;
-    margin-top: 0rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 
   .firstproject img {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0rem;
+  }
+}
+
+.img {
+  display: flex;
+  flex-direction: row;
+}
+
+.img img {
+  max-width: 775px;
+  width: 100%;
+  height: 160px;
+}
+
+@media screen and (max-width: 768px) {
+  .img {
+    flex-direction: column;
+  }
+
+  .img img {
+    max-width: 775px;
+    width: 100%;
+    height: 160px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -324,10 +360,13 @@ body {
   .secondproject {
     margin-left: 0rem;
     margin-top: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 6rem;
   }
-
   .secondproject img {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    padding-right: 0rem;
   }
 }
 
@@ -348,10 +387,12 @@ body {
   .thirdproject {
     margin-left: 0rem;
     margin-top: 0rem;
+    margin-bottom: 6rem;
   }
-
   .thirdproject img {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0rem;
   }
 }
 
@@ -372,16 +413,40 @@ body {
   .fourthproject {
     margin-left: 0rem;
     margin-top: 0rem;
+    margin-right: 0rem;
   }
-
   .fourthproject img {
-    display: none;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 0rem;
   }
 }
 
 .project_desc {
   display: flex;
+  flex-direction: row;
+}
+
+.project_text {
+  display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .project_desc {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .firstproject .project_desc {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .thirdproject .project_desc {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .firstname {
@@ -410,6 +475,23 @@ body {
   padding-left: 6rem;
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffffb3;
+}
+
+@media screen and (max-width: 768px) {
+  .firstname {
+    font-size: 1.2rem;
+    padding-top: 2rem;
+  }
+  .lastname {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .firstdesc {
+    font-size: 0.8rem;
+  }
+  .lastdesc {
+    font-size: 0.8rem;
+  }
 }
 
 /********** Splash Screen **********/
