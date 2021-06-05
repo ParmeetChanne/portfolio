@@ -48,4 +48,6 @@ textWrapper.innerHTML = textWrapper.textContent.replace(
 
 window.sr = new scrollReveal();
 
+/* skew scrolling */
+
 /* smooth scrolling */

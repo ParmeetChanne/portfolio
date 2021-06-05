@@ -11,6 +11,11 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  transition: transform 0.3s;
+  will-change: transform;
+}
+
 .navbar {
   opacity: 0;
   animation: revealdown 2s ease forwards;
@@ -169,6 +174,11 @@ body {
   padding-left: 4rem;
   padding-right: 4rem;
   padding-top: 4rem;
+}
+
+#container {
+  transition: transform 0.25s;
+  will-change: transform;
 }
 
 @media screen and (max-width: 760px) {
