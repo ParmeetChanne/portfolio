@@ -65,3 +65,5 @@ anime
     easing: "easeOutExpo",
     delay: 1000,
   });
+
+window.sr = new scrollReveal();
