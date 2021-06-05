@@ -160,7 +160,7 @@ body {
 }
 
 .container {
-  position: relative;
+  position: absolute; /* position: relative; */
   width: 100%;
   padding-left: 4rem;
   padding-right: 4rem;

@@ -67,3 +67,5 @@ anime
   });
 
 window.sr = new scrollReveal();
+
+/* smooth scrolling */

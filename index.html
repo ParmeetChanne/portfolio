@@ -27,7 +27,7 @@
         </center>
     </div>
 
-    <div class="container">
+    <div class="container" id="container">
         <nav class="navbar">
             <a href="#" class="nav_element_1">blog</a>
             <a href="#" class="nav_element_2">projects</a>
@@ -197,9 +197,12 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src='/node_modules/scrollreveal/dist/scrollreveal.min.js'></script>
     <script>
-        window.sr = ScrollReveal({ reset: true });
+        window.sr = ScrollReveal();
         ScrollReveal({ distance: '100%' });
         ScrollReveal().reveal('.project_header1', { origin: 'bottom', delay: 100, duration: 800, easing: 'ease' });
         ScrollReveal().reveal('.project_header2', { origin: 'bottom', delay: 150, duration: 800, easing: 'ease' });
