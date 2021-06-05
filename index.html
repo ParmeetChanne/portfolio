@@ -172,14 +172,14 @@
         </div>
 
         <div class="contact">
-            <span class="contact_desc">I'm always</span>
-            <span class="contact_desc">interested</span>
-            <span class="contact_desc">about cool</span>
-            <span class="contact_desc">stuff.</span>
-            <span class="contact_desc">Are you</span>
-            <span class="contact_desc">minding a</span>
-            <span class="contact_desc">project?</span>
-            <span class="contact_desc" style="color: #F5EFE1">Let's Talk.</span>
+            <span class="contact_desc desc_1">I'm always</span>
+            <span class="contact_desc desc_2">interested</span>
+            <span class="contact_desc desc_3">about cool</span>
+            <span class="contact_desc desc_4">stuff.</span>
+            <span class="contact_desc desc_5">Are you</span>
+            <span class="contact_desc desc_6">minding a</span>
+            <span class="contact_desc desc_7">project?</span>
+            <span class="contact_desc desc_8" style="color: #F5EFE1">Let's Talk.</span>
         </div>
 
         <div class="footer">
@@ -199,7 +199,29 @@
     <script src="app.js"></script>
     <script src='/node_modules/scrollreveal/dist/scrollreveal.min.js'></script>
     <script>
-        window.sr = new scrollReveal();
+        window.sr = ScrollReveal({ reset: true });
+        ScrollReveal({ distance: '100%' });
+        ScrollReveal().reveal('.project_header1', { origin: 'bottom', delay: 100, duration: 800, easing: 'ease' });
+        ScrollReveal().reveal('.project_header2', { origin: 'bottom', delay: 150, duration: 800, easing: 'ease' });
+
+        ScrollReveal().reveal('.firstname', { origin: 'bottom', delay: 100, duration: 1000  });
+        ScrollReveal().reveal('.lastname', { origin: 'bottom', delay: 150, duration: 1000 });
+        ScrollReveal().reveal('.firstdesc', { origin: 'bottom', delay: 200, duration: 1000 });
+        ScrollReveal().reveal('.lastdesc', { origin: 'bottom', delay: 250, duration: 1000 });
+
+        ScrollReveal().reveal('.blog_header', { origin: 'bottom', delay: 100, duration: 800, easing: 'ease' });
+
+        ScrollReveal().reveal('.blog_title', { origin: 'bottom', delay: 100, duration: 1000, easing: 'ease' });
+        ScrollReveal().reveal('.blog_desc', { origin: 'bottom', delay: 200, duration: 1000, easing: 'ease' });
+
+        ScrollReveal().reveal('.desc_1', { origin: 'bottom', delay: 100, duration: 800, easing: 'ease' });
+        ScrollReveal().reveal('.desc_2', { origin: 'bottom', delay: 150, duration: 800, easing: 'ease' });
+        ScrollReveal().reveal('.desc_3', { origin: 'bottom', delay: 200, duration: 800, easing: 'ease' });
+        ScrollReveal().reveal('.desc_4', { origin: 'bottom', delay: 250, duration: 800, easing: 'ease' });
+        ScrollReveal().reveal('.desc_5', { origin: 'bottom', delay: 300, duration: 800, easing: 'ease' });
+        ScrollReveal().reveal('.desc_6', { origin: 'bottom', delay: 350, duration: 800, easing: 'ease' });
+        ScrollReveal().reveal('.desc_7', { origin: 'bottom', delay: 400, duration: 800, easing: 'ease' });
+        ScrollReveal().reveal('.desc_8', { origin: 'bottom', delay: 450, duration: 800, easing: 'ease' });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   </body>
