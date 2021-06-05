@@ -7,6 +7,10 @@
   font-family: "Monument Extended";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   opacity: 0;
   animation: revealdown 2s ease forwards;
