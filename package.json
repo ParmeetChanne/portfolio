@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ParmeetChanne/portfolio#readme",
   "dependencies": {
+    "grained": "^0.0.2",
     "locomotive-scroll": "^4.1.1",
     "scrollreveal": "^4.0.9",
     "smooth-scrollbar": "^8.6.2"
