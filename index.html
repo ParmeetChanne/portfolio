@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <div class="intro">
         <center class="logo-header">
             <span class="logo text">
@@ -97,7 +96,7 @@
             <span class="project_header1">selected_</span>
             <span class="project_header2">projects:</span>
 
-            <div class="firstproject">
+            <div class="firstproject" onmouseover="chop(1)" onmouseout="chop(0)">
                 <div class="project_desc">
                     <div class="project_text">
                         <span class="firstname">Paolo_</span>
@@ -107,16 +106,19 @@
                         <span class="lastdesc">a young Italian musician</span>
                     </div>
 
+                    <div id='circle' data-text="SEE MORE SEE MORE&nbsp;"></div>
+
                     <div class="img">
                         <img src="project-image-2.jpg" alt="project-image">
                     </div>
                 </div>
             </div>
-            <div class="secondproject">
+            <div class="secondproject" onmouseover="chop(1)" onmouseout="chop(0)">
                 <div class="project_desc">
                     <div class="img">
                         <img src="project-image-2.jpg" alt="project-image">
                     </div>
+
                     <div class="project_text">
                         <span class="firstname">Paolo_</span>
                         <span class="lastname">Fornasier</span>
@@ -135,6 +137,9 @@
                         <span class="firstdesc">The portfolio of Paolo Fornasier,</span>
                         <span class="lastdesc">a young Italian musician</span>
                     </div>
+
+                    <div id='circle' data-text="SEE MORE SEE MORE&nbsp;"></div>
+
                     <div class="img">
                         <img src="project-image-2.jpg" alt="project-image">
                     </div>
@@ -203,7 +208,8 @@
         </div>
 
     </div>
-
+    
+    
     <script>
         const section = document.querySelector("section");
             let currentPos = window.pageYOffset;
@@ -225,6 +231,12 @@
     </script>
 
     <script src="app.js"></script>
+
+    <script>
+        function chop(op) {
+            document.getElementById('circle').style.opacity = op;
+        }
+    </script>
 
     <script src="/node_modules/grained/grained.js"></script>
 
