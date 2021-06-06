@@ -568,11 +568,20 @@ body {
 .firstproject:hover {
   cursor: pointer;
 }
+.secondproject:hover {
+  cursor: pointer;
+}
+.thirdproject:hover {
+  cursor: pointer;
+}
+.fourthproject:hover {
+  cursor: pointer;
+}
 
 #circle {
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate-animation 14s linear infinite;
+  animation: rotate-animation 12s linear infinite;
   color: white !important;
   z-index: 15;
   left: 3rem;
@@ -591,11 +600,12 @@ body {
 #circle2 {
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate-animation 14s linear infinite;
+  animation: rotate-animation 12s linear infinite;
   color: white !important;
   z-index: 15;
-  left: 3rem;
-  top: 0rem;
+  left: 0rem;
+  right: 3rem;
+  top: 6rem;
   opacity: 0;
 }
 
@@ -610,7 +620,7 @@ body {
 #circle3 {
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate-animation 14s linear infinite;
+  animation: rotate-animation 12s linear infinite;
   color: white !important;
   z-index: 15;
   left: 3rem;
@@ -629,11 +639,12 @@ body {
 #circle4 {
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate-animation 14s linear infinite;
+  animation: rotate-animation 12s linear infinite;
   color: white !important;
   z-index: 15;
-  left: 3rem;
-  top: 0rem;
+  left: 0rem;
+  right: 3rem;
+  top: 6rem;
   opacity: 0;
 }
 
@@ -803,6 +814,13 @@ body {
   color: white;
   padding-left: 2rem;
   font-size: 1.5rem;
+}
+
+.lastname {
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
 }
 
 .lastname {
