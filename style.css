@@ -577,10 +577,29 @@ body {
   z-index: 15;
   left: 3rem;
   top: 0rem;
-  opacity: 1;
+  opacity: 0;
 }
 
 #circle span {
+  position: absolute;
+  font-size: 1.1rem;
+  color: white !important;
+  top: 0;
+  left: 0;
+}
+
+#circle2 {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate-animation 14s linear infinite;
+  color: white !important;
+  z-index: 15;
+  left: 3rem;
+  top: 0rem;
+  opacity: 0;
+}
+
+#circle2 span {
   position: absolute;
   font-size: 1.1rem;
   color: white !important;

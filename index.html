@@ -101,19 +101,19 @@
                     <div class="project_text">
                         <span class="firstname">Paolo_</span>
                         <span class="lastname">Fornasier</span>
-
+            
                         <span class="firstdesc">The portfolio of Paolo Fornasier,</span>
                         <span class="lastdesc">a young Italian musician</span>
                     </div>
-
+            
                     <div id='circle' data-text="SEE MORE SEE MORE&nbsp;"></div>
-
+            
                     <div class="img">
                         <img src="project-image-2.jpg" alt="project-image">
                     </div>
                 </div>
             </div>
-            <div class="secondproject" onmouseover="chop(1)" onmouseout="chop(0)">
+            <div class="secondproject">
                 <div class="project_desc">
                     <div class="img">
                         <img src="project-image-2.jpg" alt="project-image">
@@ -128,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            <div class="thirdproject">
+            <div class="thirdproject" onmouseover="chop2(1)" onmouseout="chop2(0)">
                 <div class="project_desc">
                     <div class="project_text">
                         <span class="firstname">Paolo_</span>
@@ -138,7 +138,25 @@
                         <span class="lastdesc">a young Italian musician</span>
                     </div>
 
-                    <div id='circle' data-text="SEE MORE SEE MORE&nbsp;"></div>
+                    <div id="circle2" data-text="SEE MORE SEE MORE&nbsp;" style="opacity: 1;"><span
+                            style="transform: rotateY(0deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(20deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(40deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(60deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(80deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(100deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(120deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(140deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(160deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(180deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(200deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(220deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(240deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(260deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(280deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(300deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(320deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(340deg) translateZ(100px);">&nbsp;</span></div>
 
                     <div class="img">
                         <img src="project-image-2.jpg" alt="project-image">
@@ -236,6 +254,9 @@
         function chop(op) {
             document.getElementById('circle').style.opacity = op;
         }
+        function chop2(op) {
+                document.getElementById('circle2').style.opacity = op;
+            }
     </script>
 
     <script src="/node_modules/grained/grained.js"></script>
