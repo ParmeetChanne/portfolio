@@ -834,6 +834,24 @@ body {
   }
 }
 
+.desc_8::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1.5rem;
+  background-color: #f5efe1;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .desc_8:hover::before {
+    right: auto;
+    width: 60%;
+  }
+}
+
 .footer {
   width: 100%;
   padding: 5rem;
