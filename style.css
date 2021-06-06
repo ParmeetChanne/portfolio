@@ -607,6 +607,44 @@ body {
   left: 0;
 }
 
+#circle3 {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate-animation 14s linear infinite;
+  color: white !important;
+  z-index: 15;
+  left: 3rem;
+  top: 0rem;
+  opacity: 0;
+}
+
+#circle3 span {
+  position: absolute;
+  font-size: 1.1rem;
+  color: white !important;
+  top: 0;
+  left: 0;
+}
+
+#circle4 {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate-animation 14s linear infinite;
+  color: white !important;
+  z-index: 15;
+  left: 3rem;
+  top: 0rem;
+  opacity: 0;
+}
+
+#circle4 span {
+  position: absolute;
+  font-size: 1.1rem;
+  color: white !important;
+  top: 0;
+  left: 0;
+}
+
 @keyframes rotate-animation {
   0% {
     transform: rotateY(360deg) rotateX(20deg);

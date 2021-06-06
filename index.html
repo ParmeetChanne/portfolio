@@ -113,11 +113,31 @@
                     </div>
                 </div>
             </div>
-            <div class="secondproject">
+            <div class="secondproject" onmouseover="chop2(1)" onmouseout="chop2(0)">
                 <div class="project_desc">
                     <div class="img">
                         <img src="project-image-2.jpg" alt="project-image">
                     </div>
+
+                    <div id="circle2" data-text="SEE MORE SEE MORE&nbsp;" style="opacity: 1;"><span
+                            style="transform: rotateY(0deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(20deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(40deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(60deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(80deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(100deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(120deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(140deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(160deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(180deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(200deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(220deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(240deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(260deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(280deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(300deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(320deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(340deg) translateZ(100px);">&nbsp;</span></div>
 
                     <div class="project_text">
                         <span class="firstname">Paolo_</span>
@@ -128,7 +148,7 @@
                     </div>
                 </div>
             </div>
-            <div class="thirdproject" onmouseover="chop2(1)" onmouseout="chop2(0)">
+            <div class="thirdproject" onmouseover="chop3(1)" onmouseout="chop3(0)">
                 <div class="project_desc">
                     <div class="project_text">
                         <span class="firstname">Paolo_</span>
@@ -138,7 +158,7 @@
                         <span class="lastdesc">a young Italian musician</span>
                     </div>
 
-                    <div id="circle2" data-text="SEE MORE SEE MORE&nbsp;" style="opacity: 1;"><span
+                    <div id="circle3" data-text="SEE MORE SEE MORE&nbsp;" style="opacity: 1;"><span
                             style="transform: rotateY(0deg) translateZ(100px);">S</span><span
                             style="transform: rotateY(20deg) translateZ(100px);">E</span><span
                             style="transform: rotateY(40deg) translateZ(100px);">E</span><span
@@ -163,11 +183,32 @@
                     </div>
                 </div>
             </div>
-            <div class="fourthproject">
+            <div class="fourthproject" onmouseover="chop4(1)" onmouseout="chop4(0)">
                 <div class="project_desc">
                     <div class="img">
                         <img src="project-image-2.jpg" alt="project-image">
                     </div>
+
+                    <div id="circle4" data-text="SEE MORE SEE MORE&nbsp;" style="opacity: 1;"><span
+                            style="transform: rotateY(0deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(20deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(40deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(60deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(80deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(100deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(120deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(140deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(160deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(180deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(200deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(220deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(240deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(260deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(280deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(300deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(320deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(340deg) translateZ(100px);">&nbsp;</span></div>
+
                     <div class="project_text">
                         <span class="firstname">Paolo_</span>
                         <span class="lastname">Fornasier</span>
@@ -255,8 +296,14 @@
             document.getElementById('circle').style.opacity = op;
         }
         function chop2(op) {
-                document.getElementById('circle2').style.opacity = op;
-            }
+            document.getElementById('circle2').style.opacity = op;
+        }
+        function chop3(op) {
+            document.getElementById('circle3').style.opacity = op;
+        }
+        function chop4(op) {
+             document.getElementById('circle4').style.opacity = op;
+        }
     </script>
 
     <script src="/node_modules/grained/grained.js"></script>
