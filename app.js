@@ -68,3 +68,5 @@ characters.forEach((character, index) => {
 
   circle.appendChild(span);
 });
+
+/* image effect */

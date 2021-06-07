@@ -26,10 +26,6 @@ section {
   will-change: transform;
 }
 
-#container {
-  background-color: #000;
-}
-
 .navbar {
   opacity: 0;
   animation: revealdown 2s ease forwards;
