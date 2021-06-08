@@ -13,6 +13,136 @@ html {
   scrollbar-width: none;
 }
 
+#app {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.grid {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.grid__item {
+  margin: 0 0 10rem;
+  display: flex;
+  flex-direction: row;
+  padding-left: 8rem;
+}
+
+.grid__item-img {
+  display: block;
+  cursor: pointer;
+  width: 775px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.grid__item-img--large {
+  pointer-events: none;
+  position: fixed;
+  opacity: 0;
+}
+
+.grid__item-caption {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+}
+
+.grid__item-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1.25rem 0;
+  line-height: 1;
+  color: white;
+}
+
+.grid__item-text {
+  color: white;
+  font-size: 1.1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fullview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  padding: 2rem;
+  z-index: 3;
+  grid-template-columns: 100%;
+  pointer-events: none;
+}
+
+.fullview__item {
+  pointer-events: none;
+  grid-area: 1 / 1 / 2 / 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.fullview__item--current {
+  pointer-events: auto;
+}
+
+.fullview__item-title {
+  margin: 0 0 0 0.25rem;
+  line-height: 1;
+  font-size: 4rem;
+  font-weight: 400;
+  opacity: 0;
+  align-self: end;
+  color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.fullview__close {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.fullview__item--current ~ .fullview__close {
+  pointer-events: auto;
+}
+
+.fullview__close:focus {
+  outline: none;
+}
+
+.fullview__close svg {
+  fill: currentColor;
+}
+
+/* Normal */
+
 .noise-wrapper {
   position: absolute;
   left: 0;
@@ -593,6 +723,9 @@ body {
   color: white;
   font-size: 8rem;
   text-align: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   padding-left: 7rem;
 }
 
@@ -600,6 +733,9 @@ body {
   color: white;
   font-size: 8rem;
   text-align: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 @media screen and (max-width: 768px) {
@@ -609,6 +745,7 @@ body {
   }
   .project_header2 {
     font-size: 2.6rem;
+    padding-left: 0rem;
   }
 }
 
@@ -648,6 +785,7 @@ body {
   left: 3rem;
   top: 0rem;
   opacity: 0;
+  top: 6rem;
 }
 
 #circle span {
@@ -666,7 +804,7 @@ body {
   z-index: 15;
   left: 0rem;
   right: 3rem;
-  top: 6rem;
+  top: 0rem;
   opacity: 0;
 }
 
@@ -685,7 +823,7 @@ body {
   color: white !important;
   z-index: 15;
   left: 3rem;
-  top: 0rem;
+  top: 6rem;
   opacity: 0;
 }
 
@@ -705,7 +843,7 @@ body {
   z-index: 15;
   left: 0rem;
   right: 3rem;
-  top: 6rem;
+  top: 0rem;
   opacity: 0;
 }
 

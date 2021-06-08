@@ -9,7 +9,9 @@
     <title>Parmeet Channe</title>
 </head>
 
-<body>
+<body id="body">
+    <div id="app"></div>
+
     <div class="intro">
         <center class="logo-header">
             <span class="logo text">
@@ -34,7 +36,7 @@
         </div>
         <nav class="navbar">
             <a href="#blogs" class="nav_element_1 link--kukuri" nav-name="blog">blog</a>
-            <a href="#projects" class="nav_element_2">projects</a>
+            <a href="#project_header" class="nav_element_2">projects</a>
             <a href="#contact" class="nav_element_3">contact</a>
         </nav>
         <div class="header">
@@ -95,6 +97,7 @@
                 </div>
             </div>
 
+            <!--
             <div class="projects" id="projects">
                 <span class="project_header1">selected_</span>
                 <span class="project_header2">projects:</span>
@@ -246,6 +249,151 @@
                     </div>
                 </div>
             </div>
+        -->
+
+            <!-- Image Effect Stuff -->
+
+            <span class="project_header1" id="project_header">selected_</span>
+            <span class="project_header2">projects:</span>
+
+            <div class="grid" id="itemsWrapper">
+                <div class="grid__item" onmouseover="chop(1)" onmouseout="chop(0)">
+                    <img class="grid__item-img" src="img/10.jpg" alt="A picture of Montparnasse in Paris" />
+                    <img class="grid__item-img grid__item-img--large" src="img/10.jpg" />
+
+                    <div id='circle' data-text="MORE DETAILS MORE DETAILS&nbsp;"></div>
+
+                    <div class="grid__item-caption">
+                        <span class="grid__item-title">Neka Lax</span>
+                        <span class="grid__item-text">
+                            Everything is happy if you choose to make it that way.
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="grid__item" style="display: flex; flex-direction: row-reverse; padding-right: 12rem;" onmouseover="chop2(1)" onmouseout="chop2(0)">
+                    <img class="grid__item-img" src="img/11.jpg" alt="A picture of a street in Barcelona" />
+                    <img class="grid__item-img grid__item-img--large" src="img/11.jpg" style="float: right;" />
+
+                    <div id="circle2" data-text="MORE DETAILS MORE DETAILS&nbsp;" style="opacity: 0;"><span
+                            style="transform: rotateY(0deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(13.8462deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(27.6923deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(41.5385deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(55.3846deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(69.2308deg) translateZ(100px);">D</span><span
+                            style="transform: rotateY(83.0769deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(96.9231deg) translateZ(100px);">T</span><span
+                            style="transform: rotateY(110.769deg) translateZ(100px);">A</span><span
+                            style="transform: rotateY(124.615deg) translateZ(100px);">I</span><span
+                            style="transform: rotateY(138.462deg) translateZ(100px);">L</span><span
+                            style="transform: rotateY(152.308deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(166.154deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(180deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(193.846deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(207.692deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(221.538deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(235.385deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(249.231deg) translateZ(100px);">D</span><span
+                            style="transform: rotateY(263.077deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(276.923deg) translateZ(100px);">T</span><span
+                            style="transform: rotateY(290.769deg) translateZ(100px);">A</span><span
+                            style="transform: rotateY(304.615deg) translateZ(100px);">I</span><span
+                            style="transform: rotateY(318.462deg) translateZ(100px);">L</span><span
+                            style="transform: rotateY(332.308deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(346.154deg) translateZ(100px);">&nbsp;</span></div>
+
+                    <div class="grid__item-caption">
+                        <span class="grid__item-title">André Free</span>
+                        <span class="grid__item-text">
+                            You can't make a mistake.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid__item" onmouseover="chop3(1)" onmouseout="chop3(0)">
+                    <img class="grid__item-img" src="img/12.jpg" alt="A picture of a street in Rome" />
+                    <img class="grid__item-img grid__item-img--large" src="img/12.jpg" />
+
+                    <div id="circle3" data-text="MORE DETAILS MORE DETAILS&nbsp;" style="opacity: 1;"><span
+                            style="transform: rotateY(0deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(13.8462deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(27.6923deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(41.5385deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(55.3846deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(69.2308deg) translateZ(100px);">D</span><span
+                            style="transform: rotateY(83.0769deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(96.9231deg) translateZ(100px);">T</span><span
+                            style="transform: rotateY(110.769deg) translateZ(100px);">A</span><span
+                            style="transform: rotateY(124.615deg) translateZ(100px);">I</span><span
+                            style="transform: rotateY(138.462deg) translateZ(100px);">L</span><span
+                            style="transform: rotateY(152.308deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(166.154deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(180deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(193.846deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(207.692deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(221.538deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(235.385deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(249.231deg) translateZ(100px);">D</span><span
+                            style="transform: rotateY(263.077deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(276.923deg) translateZ(100px);">T</span><span
+                            style="transform: rotateY(290.769deg) translateZ(100px);">A</span><span
+                            style="transform: rotateY(304.615deg) translateZ(100px);">I</span><span
+                            style="transform: rotateY(318.462deg) translateZ(100px);">L</span><span
+                            style="transform: rotateY(332.308deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(346.154deg) translateZ(100px);">&nbsp;</span></div>
+
+                    <div class="grid__item-caption">
+                        <h2 class="grid__item-title">Wisma Green</h2>
+                        <p class="grid__item-text">
+                            This present moment is perfect simply due to the fact you're experiencing it.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid__item" style="display: flex; flex-direction: row-reverse; padding-right: 12rem;" onmouseover="chop4(1)"
+                    onmouseout="chop4(0)">
+                    <img class="grid__item-img" src="img/11.jpg" alt="A picture of a street in Barcelona" />
+                    <img class="grid__item-img grid__item-img--large" src="img/11.jpg" style="float: right;" />
+                
+                    <div id="circle4" data-text="MORE DETAILS MORE DETAILS&nbsp;" style="opacity: 0;"><span
+                            style="transform: rotateY(0deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(13.8462deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(27.6923deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(41.5385deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(55.3846deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(69.2308deg) translateZ(100px);">D</span><span
+                            style="transform: rotateY(83.0769deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(96.9231deg) translateZ(100px);">T</span><span
+                            style="transform: rotateY(110.769deg) translateZ(100px);">A</span><span
+                            style="transform: rotateY(124.615deg) translateZ(100px);">I</span><span
+                            style="transform: rotateY(138.462deg) translateZ(100px);">L</span><span
+                            style="transform: rotateY(152.308deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(166.154deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(180deg) translateZ(100px);">M</span><span
+                            style="transform: rotateY(193.846deg) translateZ(100px);">O</span><span
+                            style="transform: rotateY(207.692deg) translateZ(100px);">R</span><span
+                            style="transform: rotateY(221.538deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(235.385deg) translateZ(100px);"> </span><span
+                            style="transform: rotateY(249.231deg) translateZ(100px);">D</span><span
+                            style="transform: rotateY(263.077deg) translateZ(100px);">E</span><span
+                            style="transform: rotateY(276.923deg) translateZ(100px);">T</span><span
+                            style="transform: rotateY(290.769deg) translateZ(100px);">A</span><span
+                            style="transform: rotateY(304.615deg) translateZ(100px);">I</span><span
+                            style="transform: rotateY(318.462deg) translateZ(100px);">L</span><span
+                            style="transform: rotateY(332.308deg) translateZ(100px);">S</span><span
+                            style="transform: rotateY(346.154deg) translateZ(100px);">&nbsp;</span></div>
+                
+                    <div class="grid__item-caption">
+                        <span class="grid__item-title">André Free</span>
+                        <span class="grid__item-text">
+                            You can't make a mistake.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Section -->
 
             <div class="blogs" id="blogs">
                 <span class="blog_header">blog:</span>
@@ -288,7 +436,7 @@
             <ul class="social">
                 <li><a href="#">dribbble</a></li>
                 <li><a href="#">behance</a></li>
-                <li><a href="#">twitter</a></li>
+                <li><a href="#">linkedin</a></li>
                 <li><a href="#">instagram</a></li>
             </ul>
             <ul class="top">
@@ -298,6 +446,140 @@
 
     </div>
 
+    <div class="fullview">
+        <div class="fullview__item">
+            <h2 class="fullview__item-title">Neka Lax</h2>
+        </div>
+        <div class="fullview__item">
+            <h2 class="fullview__item-title">André Free</h2>
+        </div>
+        <div class="fullview__item">
+            <h2 class="fullview__item-title">Wisma Green</h2>
+        </div>
+        <div class="fullview__item">
+            <h2 class="fullview__item-title">André Free</h2>
+        </div>
+        <button class="fullview__close" aria-label="Close preview"><svg aria-hidden="true" width="24" height="22px"
+                viewBox="0 0 24 22">
+            </svg>CLOSE</button>
+    </div>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/CSSPlugin.min.js"></script>
+    <script src="js/EasePack.min.js"></script>
+    <script src="js/GridToFullscreenEffect.js"></script>
+    <script src="js/basicDemo.js"></script>
+    <script>
+        let currentIndex;
+        const itemsWrapper = document.getElementById("itemsWrapper");
+        const thumbs = [...itemsWrapper.querySelectorAll("img.grid__item-img:not(.grid__item-img--large)")];
+        const fullviewItems = [...document.querySelectorAll(".fullview__item")];
+        const backToGridCtrl = document.querySelector(".fullview__close");
+        const transitionEffectDuration = 1.2;
+
+        const transitionEffect = createDemoEffect({
+            activation: { type: "mouse" },
+            timing: {
+                duration: transitionEffectDuration
+            },
+            transformation: {
+                type: "simplex",
+                props: {
+                    seed: "8000",
+                    frequencyX: 0.2,
+                    frequencyY: 0.2,
+                    amplitudeX: 0.3,
+                    amplitudeY: 0.3
+                }
+            },
+            onToFullscreenStart: ({ index }) => {
+                currentIndex = index;
+                thumbs[currentIndex].style.opacity = 0;
+                transitionEffect.uniforms.uSeed.value = index * 10;
+                toggleFullview();
+            },
+            onToGridFinish: ({ index, lastIndex }) => {
+                thumbs[lastIndex].style.opacity = 1;
+                fullviewItems[currentIndex].classList.remove("fullview__item--current");
+            },
+            seed: 800,
+            easings: {
+                toFullscreen: Power1.easeOut,
+                toGrid: Power1.easeInOut
+            }
+        });
+        transitionEffect.init();
+
+        const toggleFullview = () => {
+            if (transitionEffect.isFullscreen) {
+                TweenLite.to(fullviewItems[currentIndex].querySelector(".fullview__item-title"), 0.2, {
+                    ease: Quad.easeOut,
+                    opacity: 0,
+                    x: "5%"
+                });
+                TweenLite.to(backToGridCtrl, 0.2, {
+                    ease: Quad.easeOut,
+                    opacity: 0,
+                    scale: 0
+                });
+
+                transitionEffect.toGrid();
+            } else {
+                fullviewItems[currentIndex].classList.add("fullview__item--current");
+
+                TweenLite.to(fullviewItems[currentIndex].querySelector(".fullview__item-title"), 1, {
+                    ease: Expo.easeOut,
+                    startAt: { x: "5%" },
+                    opacity: 1,
+                    x: "0%",
+                    delay: transitionEffectDuration * 0.6
+                });
+                TweenLite.to(backToGridCtrl, 1, {
+                    ease: Expo.easeOut,
+                    startAt: { scale: 0 },
+                    opacity: 1,
+                    scale: 1,
+                    delay: transitionEffectDuration * 0.6
+                });
+            }
+        };
+
+        backToGridCtrl.addEventListener("click", () => {
+            if (transitionEffect.isAnimating) {
+                return;
+            }
+            toggleFullview();
+        });
+
+        // Preload all the images in the page
+        imagesLoaded(document.querySelectorAll("img"), instance => {
+            //https://www.techrepublic.com/article/preloading-and-the-javascript-image-object/
+            document.body.classList.remove("loading");
+
+            // Make Images sets for the transition effect
+            let images = [];
+            for (var i = 0, imageSet = {}; i < instance.elements.length; i++) {
+                let image = {
+                    element: instance.elements[i],
+                    image: instance.images[i].isLoaded ? instance.images[i].img : null
+                };
+                if (i % 2 === 0) {
+                    imageSet = {};
+                    imageSet.small = image;
+                }
+
+                if (i % 2 === 1) {
+                    imageSet.large = image;
+                    images.push(imageSet);
+                }
+            }
+            transitionEffect.createTextures(images);
+        });
+    </script>
+
+    <!-- Normal -->
 
     <script>
         const section = document.querySelector("section");
