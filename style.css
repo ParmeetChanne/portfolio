@@ -39,7 +39,7 @@ html {
   background: transparent
     url(https://www.dropbox.com/s/h7ab1c82ctzy83n/noise.png?raw=1) 0 0;
   background-size: 320px 320px;
-  opacity: 0.09;
+  opacity: 0.1;
   animation: noise 4s steps(8, end) infinite both;
 }
 @keyframes noise {
