@@ -31,9 +31,6 @@
     </div>
 
     <div class="container" id="container">
-        <div class="noise-wrapper">
-            <div class="noise"></div>
-        </div>
         <nav class="navbar">
             <a href="#blogs" class="nav_element_1 link--kukuri" nav-name="blog">blog</a>
             <a href="#project_header" class="nav_element_2">projects</a>
@@ -89,7 +86,7 @@
                     </div>
                 </div>
                 <div class="my_info">
-                    <span class="info_1">I am a developer and UX/UI designer based in Italy.</span>
+                    <span class="info_1">I am a developer and UX/UI designer based in India.</span>
                     <span class="info_2">National and international customers have relied on me for design,</span>
                     <span class="info_3">implementation, and management of their digital products.</span>
                     <span class="info_4">As a freelancer, I works also with web agencies, companies,</span>
@@ -258,8 +255,8 @@
 
             <div class="grid" id="itemsWrapper">
                 <div class="grid__item" onmouseover="chop(1)" onmouseout="chop(0)">
-                    <img class="grid__item-img" src="img/10.jpg" alt="A picture of Montparnasse in Paris" />
-                    <img class="grid__item-img grid__item-img--large" src="img/10.jpg" />
+                    <img class="grid__item-img" src="img/lambo_black.jpg" alt="A picture of Montparnasse in Paris" />
+                    <img class="grid__item-img grid__item-img--large" src="img/lambo_black.jpg" />
 
                     <div id='circle' data-text="MORE DETAILS MORE DETAILS&nbsp;"></div>
 
@@ -273,7 +270,7 @@
                 
                 <div class="grid__item_left" onmouseover="chop2(1)" onmouseout="chop2(0)">
                     <img class="grid__item-img" src="img/11.jpg" alt="A picture of a street in Barcelona" />
-                    <img class="grid__item-img grid__item-img--large" src="img/11.jpg" style="float: right;" />
+                    <img class="grid__item-img grid__item-img--large" src="img/11_large.jpg" style="float: right;" />
 
                     <div id="circle2" data-text="MORE DETAILS MORE DETAILS&nbsp;" style="opacity: 0;"><span
                             style="transform: rotateY(0deg) translateZ(100px);">M</span><span
@@ -313,9 +310,9 @@
 
                 <div class="grid__item" onmouseover="chop3(1)" onmouseout="chop3(0)">
                     <img class="grid__item-img" src="img/12.jpg" alt="A picture of a street in Rome" />
-                    <img class="grid__item-img grid__item-img--large" src="img/12.jpg" />
+                    <img class="grid__item-img grid__item-img--large" src="img/12_large.jpg" />
 
-                    <div id="circle3" data-text="MORE DETAILS MORE DETAILS&nbsp;" style="opacity: 1;"><span
+                    <div id="circle3" data-text="MORE DETAILS MORE DETAILS&nbsp;" style="opacity: 0;"><span
                             style="transform: rotateY(0deg) translateZ(100px);">M</span><span
                             style="transform: rotateY(13.8462deg) translateZ(100px);">O</span><span
                             style="transform: rotateY(27.6923deg) translateZ(100px);">R</span><span
@@ -354,7 +351,7 @@
                 <div class="grid__item_left" onmouseover="chop4(1)"
                     onmouseout="chop4(0)">
                     <img class="grid__item-img" src="img/11.jpg" alt="A picture of a street in Barcelona" />
-                    <img class="grid__item-img grid__item-img--large" src="img/11.jpg" />
+                    <img class="grid__item-img grid__item-img--large" src="img/11_large.jpg" />
                 
                     <div id="circle4" data-text="MORE DETAILS MORE DETAILS&nbsp;" style="opacity: 0;"><span
                             style="transform: rotateY(0deg) translateZ(100px);">M</span><span
@@ -402,7 +399,6 @@
                     <span class="blog_title">How to Setup Github API with NextJS</span>
                     <span class="blog_desc">How to dynamically fetch your repositories from github api and use it in
                         your nextjs application.</span>
-                    <span>Everything is happy if you choose to make it that way.</span>
                 </div>
                 <div class="blog_2">
                     <span class="blog_title">How to Setup Github API with NextJS</span>
@@ -447,12 +443,15 @@
     </div>
 
     <div class="fullview">
+        <div class="noise-wrapper">
+            <div class="noise"></div>
+        </div>
                 
         <div class="fullview__item">
             <div class="fullview__item-layout">
                 <center class="image_circle">
                     <img class="fullview__item-image" src="img/11.jpg" />
-                    <a><div class="fullview__item-circle" id="circle5" data-text="MORE DETAILS MORE DETAILS&nbsp;"></div></a>
+                    <a href="https://google.com"><div class="fullview__item-circle" id="circle5" data-text="MORE DETAILS MORE DETAILS&nbsp;"></div></a>
                 </center>
                 <div class="title_content">
                     <span class="fullview__item-title">Neka Lax</span>
@@ -601,6 +600,8 @@
                 viewBox="0 0 24 22">
             </svg>CLOSE</button>
     </div>
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
 
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/three.min.js"></script>
@@ -791,6 +792,19 @@
 
     <!-- Normal -->
 
+    <script type="text/javascript">
+        function progressBarScroll() {
+                let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+                    height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+                    scrolled = (winScroll / height) * 100;
+                document.getElementById("progressbar").style.height = scrolled + "%";
+            }
+
+            window.onscroll = function () {
+                progressBarScroll();
+            };
+    </script>
+
     <script>
         const section = document.querySelector("section");
         let currentPos = window.pageYOffset;
@@ -799,7 +813,7 @@
         const callDistort = function () {
             const newPos = window.pageYOffset;
             const diff = newPos - currentPos;
-            const speed = diff * 0.15;
+            const speed = diff * 0.1;
 
             section.style.transform = "skewY(" + speed + "deg)";
 

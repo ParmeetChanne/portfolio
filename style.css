@@ -13,6 +13,34 @@ html {
   scrollbar-width: none;
 }
 
+#scrollpath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #f5efe1;
+}
+#progressbar::before,
+#progressbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5efe1;
+}
+
 #app {
   top: 0;
   left: 0;
@@ -32,17 +60,19 @@ html {
 }
 
 .grid__item {
-  margin: 0 0 10rem;
+  margin-top: 10rem;
   display: flex;
   flex-direction: row;
   padding-left: 8rem;
+  justify-content: center;
 }
 .grid__item_left {
-  margin: 0 0 10rem;
+  margin-top: 10rem;
   display: flex;
   flex-direction: row-reverse;
-  padding-left: 8rem;
-  padding-right: 12rem;
+  padding-left: 10rem;
+  padding-right: 0rem;
+  justify-content: center;
 }
 
 .grid__item-img {
@@ -83,16 +113,16 @@ html {
 }
 
 .grid__item-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  margin: 1.25rem 0;
+  margin-bottom: 1.25rem;
   line-height: 1;
   color: white;
 }
 .grid__item_left-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  margin: 1.25rem 0;
+  margin-bottom: 1.25rem;
   line-height: 1;
   color: white;
 }
@@ -225,12 +255,17 @@ html {
   opacity: 0;
   z-index: 1005;
 }
-
 #circle5 span {
   position: absolute;
   transform-origin: top left;
   color: white;
   z-index: 1005;
+}
+#circle5:hover {
+  color: #ffffffb3;
+}
+#circle5 span:hover {
+  color: #ffffffb3;
 }
 
 @keyframes rotate-animation2 {
@@ -344,6 +379,7 @@ html {
 }
 
 .fullview__close {
+  font-size: 1.5rem;
   position: fixed;
   top: 2rem;
   right: 2rem;
@@ -357,6 +393,9 @@ html {
   pointer-events: none;
   opacity: 0;
 }
+.fullview__close svg {
+  color: #ffffffb3;
+}
 
 .fullview__item--current ~ .fullview__close {
   pointer-events: auto;
@@ -364,6 +403,7 @@ html {
 
 .fullview__close:focus {
   outline: none;
+  color: #ffffffb3;
 }
 
 .fullview__close svg {
@@ -495,7 +535,7 @@ html {
   left: -500px;
   background: transparent
     url(https://www.dropbox.com/s/h7ab1c82ctzy83n/noise.png?raw=1) 0 0;
-  background-size: 1000px 1000px;
+  background-size: 900px 900px;
   opacity: 0.09;
   animation: noise 1s steps(8, end) infinite both;
 }
@@ -1109,7 +1149,7 @@ body {
   animation: rotate-animation 12s linear infinite;
   color: white !important;
   z-index: 15;
-  left: 3rem;
+  left: 0rem;
   top: 0rem;
   opacity: 0;
   top: 6rem;
@@ -1131,7 +1171,7 @@ body {
   z-index: 15;
   left: 0rem;
   right: 3rem;
-  top: 0rem;
+  top: 6rem;
   opacity: 0;
 }
 
@@ -1149,7 +1189,7 @@ body {
   animation: rotate-animation 12s linear infinite;
   color: white !important;
   z-index: 15;
-  left: 3rem;
+  left: 0rem;
   top: 6rem;
   opacity: 0;
 }
@@ -1170,7 +1210,7 @@ body {
   z-index: 15;
   left: 0rem;
   right: 3rem;
-  top: 0rem;
+  top: 6rem;
   opacity: 0;
 }
 
