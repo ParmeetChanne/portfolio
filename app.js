@@ -69,4 +69,35 @@ characters.forEach((character, index) => {
   circle.appendChild(span);
 });
 
-/* image effect */
+/* Circle5 */
+const degreeToRadian = (angle) => {
+  return angle * (Math.PI / 180);
+};
+
+const radius = 80;
+const diameter = radius * 2;
+
+const circle5 = document.querySelector("#circle5");
+circle5.style.width = `${diameter}px`;
+circle5.style.height = `${diameter}px`;
+
+const text5 = circle5.dataset.text;
+const characters5 = text5.split("");
+
+const deltaAngle5 = 360 / characters.length;
+const characterOffsetAngle = 8;
+let currentAngle = -90;
+
+characters5.forEach((character, index) => {
+  const span = document.createElement("span");
+  span.innerText = character;
+  const xPos = radius * (1 + Math.cos(degreeToRadian(currentAngle)));
+  const yPos = radius * (1 + Math.sin(degreeToRadian(currentAngle)));
+
+  const transform = `translate(${xPos}px, ${yPos}px)`;
+  const rotate = `rotate(${index * deltaAngle5 + characterOffsetAngle}deg)`;
+  span.style.transform = `${transform} ${rotate}`;
+
+  currentAngle += deltaAngle;
+  circle5.appendChild(span);
+});
