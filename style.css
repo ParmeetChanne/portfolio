@@ -1,4 +1,5 @@
 @import url(//db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended);
+@import url("https://fonts.googleapis.com/css2?family=Quantico&display=swap");
 
 * {
   margin: 0;
@@ -27,7 +28,7 @@ html {
   top: 0;
   right: 0;
   width: 6px;
-  height: 100%;
+  height: 0%;
   background-color: #f5efe1;
 }
 #progressbar::before,
@@ -614,12 +615,14 @@ section {
   opacity: 0;
   animation: reveal 2.2s ease forwards;
   animation-delay: 4.2s;
+  font-family: "Monument Extended";
 }
 
 .header_2 {
   opacity: 0;
   animation: reveal 2.1s ease forwards;
   animation-delay: 4.3s;
+  font-family: "Monument Extended";
 }
 
 .arrow_svg {
