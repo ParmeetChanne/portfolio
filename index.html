@@ -616,37 +616,27 @@
         const thumbs = [...itemsWrapper.querySelectorAll("img.grid__item-img:not(.grid__item-img--large), img.grid__item_left-img:not(.grid__item_left-img--large)")];
         const fullviewItems = [...document.querySelectorAll(".fullview__item")];
         const backToGridCtrl = document.querySelector(".fullview__close");
-        const transitionEffectDuration = 1.2;
+        const transitionEffectDuration = 1.6;
 
         const transitionEffect = createDemoEffect({
-            activation: { type: "mouse" },
+            activation: { type: "top" },
             timing: {
+                type: "sections",
+                sections: 20,
                 duration: transitionEffectDuration
-            },
-            transformation: {
-                type: "simplex",
-                props: {
-                    seed: "8000",
-                    frequencyX: 0.2,
-                    frequencyY: 0.2,
-                    amplitudeX: 0.3,
-                    amplitudeY: 0.3
-                }
             },
             onToFullscreenStart: ({ index }) => {
                 currentIndex = index;
                 thumbs[currentIndex].style.opacity = 0;
-                transitionEffect.uniforms.uSeed.value = index * 10;
                 toggleFullview();
             },
             onToGridFinish: ({ index, lastIndex }) => {
                 thumbs[lastIndex].style.opacity = 1;
                 fullviewItems[currentIndex].classList.remove("fullview__item--current");
             },
-            seed: 800,
             easings: {
-                toFullscreen: Power1.easeOut,
-                toGrid: Power1.easeInOut
+                toFullscreen: Quint.easeOut,
+                toGrid: Quint.easeInOut
             }
         });
         transitionEffect.init();
