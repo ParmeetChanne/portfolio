@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Monument Extended";
 }
 
 html {
@@ -537,7 +536,7 @@ html {
   background: transparent
     url(https://www.dropbox.com/s/h7ab1c82ctzy83n/noise.png?raw=1) 0 0;
   background-size: 900px 900px;
-  opacity: 0.09;
+  opacity: 0.08;
   animation: noise 1s steps(8, end) infinite both;
 }
 @keyframes noise {
@@ -589,11 +588,27 @@ section {
   will-change: transform;
 }
 
+.main-nav {
+  display: flex;
+  margin-top: -2rem;
+}
+
+.main-logo {
+  font-family: "Quantico";
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  font-size: 3.2rem;
+}
+
 .navbar {
   opacity: 0;
   animation: revealdown 2s ease forwards;
   animation-delay: 4.7s;
   font-size: 1.2rem;
+  font-family: "Monument Extended";
 }
 
 @keyframes revealdown {
@@ -611,58 +626,103 @@ section {
   }
 }
 
+.hero {
+  display: inline-flex;
+  flex-direction: row;
+  font-family: "Monument Extended";
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.header {
+  margin-top: 7rem;
+  text-align: left;
+  z-index: 4;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 0rem;
+}
+
 .header_1 {
+  font-size: 8.5rem;
+  line-height: 8.5rem;
   opacity: 0;
   animation: reveal 2.2s ease forwards;
   animation-delay: 4.2s;
-  font-family: "Monument Extended";
+  font-family: "Quantico";
+  font-weight: bolder;
+  font-style: italic;
 }
 
 .header_2 {
+  font-size: 8.5rem;
+  padding-top: -4rem;
   opacity: 0;
   animation: reveal 2.1s ease forwards;
   animation-delay: 4.3s;
+  font-family: "Quantico";
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.skills {
   font-family: "Monument Extended";
+  font-size: 3.7rem;
+  z-index: 0;
+  color: #212121;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: flex-end;
+  padding-left: 26rem;
+  padding-right: 0rem;
 }
-
-.arrow_svg {
-  --animate-delay: 5.5s;
-}
-
 .skill_1 {
-  opacity: 0;
-  animation: reveal 2s ease forwards;
-  animation-delay: 5s;
+  height: 8.4rem;
+  transform: scale(1, 1.2);
+  -webkit-transform: scale(1, 1.2);
+  letter-spacing: 6px;
 }
-
 .skill_2 {
-  opacity: 0;
-  animation: reveal 2s ease forwards;
-  animation-delay: 5.1s;
+  height: 8.4rem;
+  transform: scale(1, 1.2);
+  -webkit-transform: scale(1, 1.2);
+  letter-spacing: 6px;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #212121;
 }
-
 .skill_3 {
-  opacity: 0;
-  animation: reveal 2s ease forwards;
-  animation-delay: 5.2s;
+  height: 8.4rem;
+  transform: scale(1, 1.2);
+  -webkit-transform: scale(1, 1.2);
+  letter-spacing: 6px;
 }
 
 #month {
   opacity: 0;
   animation: reveal 2s ease forwards;
   animation-delay: 5.3s;
+  font-family: "Monument Extended";
 }
 
 #datee {
   opacity: 0;
   animation: reveal 2s ease forwards;
   animation-delay: 5.6s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
 }
 
 #available {
   opacity: 0;
   animation: reveal 2s ease forwards;
   animation-delay: 5.7s;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .info_1 {
@@ -744,14 +804,9 @@ body {
 }
 
 .container {
-  position: absolute; /* position: relative; */
+  position: relative; /* position: relative; */
   width: 100%;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 4rem;
-}
-
-#container {
+  padding: 4rem;
   transition: transform 0.25s;
   will-change: transform;
 }
@@ -765,20 +820,14 @@ body {
 }
 
 .header {
-  margin-top: -1.5rem !important;
   z-index: 1;
   color: white;
   font-size: 4rem;
-  top: 0%;
+  line-height: 8rem;
+  font-family: "Quantico";
+  top: 0;
   width: 100%;
   padding-right: 4rem;
-}
-
-.header h4 {
-  position: absolute;
-  left: 10%;
-  bottom: 1rem;
-  font-size: 1.6rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -922,35 +971,9 @@ body {
   color: white;
 }
 
-@media screen and (max-width: 768px) {
-  .arrow {
-    justify-content: left;
-    padding-top: 0.5rem;
-    font-weight: lighter;
-  }
-
-  .arrow svg {
-    width: 43px;
-    height: 43px;
-  }
-}
-
-.skills {
-  display: flex;
-  padding-left: 3rem;
-  flex-direction: column;
-}
-
-@media screen and (max-width: 768px) {
-  .skills {
-    font-size: 0.8rem;
-    padding-left: 1.5rem;
-  }
-}
-
 .description {
   display: inline-flex;
-  padding-top: 8rem;
+  padding-top: 12rem;
   padding-left: 10rem;
   position: relative;
   margin-bottom: 21rem;
@@ -961,6 +984,7 @@ body {
   opacity: 1;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  color: #212121 !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -992,12 +1016,14 @@ body {
 
 #month {
   display: flex;
-  font-size: 7rem;
+  font-size: 9rem;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: black;
   position: relative;
-  margin-left: 1rem;
+  margin-left: -4rem;
+  margin-top: 1rem;
+  font-family: "Monument Extended";
 }
 
 @media screen and (max-width: 768px) {
@@ -1011,7 +1037,7 @@ body {
 .info {
   display: flex;
   flex-direction: column;
-  padding-top: 3.5rem;
+  padding-top: 6.5rem;
   padding-left: 1rem;
 }
 
@@ -1048,9 +1074,9 @@ body {
   display: flex;
   position: relative;
   flex-direction: column;
-  margin-top: 22rem;
-  margin-left: -20rem;
-  font-size: 1.2rem;
+  margin-top: 20rem;
+  margin-left: -22rem;
+  font-size: 1.3rem;
 }
 
 .my_info span {
@@ -1091,21 +1117,27 @@ body {
 
 .project_header1 {
   color: white;
-  font-size: 8rem;
+  font-size: 7rem;
   text-align: left;
   justify-content: center;
   align-items: center;
   display: flex;
-  padding-left: 7rem;
+  padding-left: 0rem;
+  font-family: "Quantico";
+  font-weight: bolder;
+  line-height: 5rem;
 }
 
 .project_header2 {
   color: white;
-  font-size: 8rem;
+  font-size: 7rem;
   text-align: left;
   justify-content: center;
   align-items: center;
   display: flex;
+  font-family: "Quantico";
+  font-weight: bolder;
+  padding-left: 0rem;
 }
 
 @media screen and (max-width: 768px) {
