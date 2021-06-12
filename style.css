@@ -535,7 +535,7 @@ html {
   left: -500px;
   background: transparent
     url(https://www.dropbox.com/s/h7ab1c82ctzy83n/noise.png?raw=1) 0 0;
-  background-size: 900px 900px;
+  background-size: 650px 650px;
   opacity: 0.09;
   animation: noise 1s steps(8, end) infinite both;
 }
@@ -918,6 +918,7 @@ section {
   animation: reveal 2s ease forwards;
   animation-delay: 5.3s;
   font-family: "Monument Extended";
+  font-weight: 600;
 }
 
 #datee {
