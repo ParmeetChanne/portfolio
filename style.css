@@ -1201,7 +1201,7 @@ body {
 @media screen and (max-width: 768px) {
   .description {
     padding-top: 7rem;
-    padding-left: 0rem;
+    padding-left: 2rem;
     margin-bottom: 16rem;
   }
 
