@@ -43,8 +43,8 @@
         </div>
         <div class="hero">
             <div class="header">
-                <h1 class="header_1">PARMEET</h1>
-                <h1 class="header_2">CHANNE</h1>
+                <h1 class="header_1"><span id="header_1">PARMEET</span></h1>
+                <h1 class="header_2"><span>CHANNE</span></h1>
             </div>
             <div class="skills">
                 <h1 class="skill_1">DEVELOPER</h1>
@@ -63,7 +63,7 @@
                                 <path
                                     d="M272.5,401 C383.233092,401 473,311.233092 473,200.5 C473,89.7669077 383.233092,0 272.5,0 C161.766908,0 72,89.7669077 72,200.5"
                                     id="Shape" stroke="#212121" opacity="1"
-                                    transform="translate(272.500000, 200.500000) scale(-1, -1) translate(-272.500000, -200.500000) "
+                                    transform="translate(272.500000, 200.500000) scale(-1, -1) translate(-272.500000, -200.500000)"
                                     stroke-dasharray="944.9669189453125" style="stroke-dashoffset: 0px;"></path>
                             </g>
                         </g>
@@ -607,6 +607,15 @@
     <div id="progressbar"></div>
     <div id="scrollpath"></div>
 
+
+    <!-- Text reveal effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+        let tl = gsap.timeline({defaults: {ease: "SlowMo.easeOut"}})
+
+        tl.to("#header_1", {y: "0%", duration: 0.7, stagger: 0.2})
+    </script>
+
     <!-- Parallax text effect -->
     <script>
         let atScroll = false;
@@ -679,7 +688,7 @@
             },
             seed: 800,
             easings: {
-                toFullscreen: Cubic.easeOut,
+                toFullscreen: Power3.easeInOut,
                 toGrid: Power3.easeInOut
             }
         });
@@ -886,12 +895,11 @@
         window.sr = ScrollReveal();
         ScrollReveal({ distance: '100%' });
         ScrollReveal().reveal('.project_header1', { origin: 'bottom', delay: 100, duration: 800, easing: 'ease' });
-        ScrollReveal().reveal('.project_header2', { origin: 'bottom', delay: 150, duration: 800, easing: 'ease' });
+         ScrollReveal().reveal('.project_header2', { origin: 'bottom', delay: 100, duration: 800, easing: 'ease' });
+        
+        ScrollReveal().reveal('.grid__item-title', { origin: 'bottom', delay: 150, duration: 800, easing: 'ease' });
+        ScrollReveal().reveal('. grid__item-text', { origin: 'bottom', delay: 150, duration: 800, easing: 'ease' });
 
-        ScrollReveal().reveal('.firstname', { origin: 'bottom', delay: 100, duration: 1000 });
-        ScrollReveal().reveal('.lastname', { origin: 'bottom', delay: 150, duration: 1000 });
-        ScrollReveal().reveal('.firstdesc', { origin: 'bottom', delay: 200, duration: 1000 });
-        ScrollReveal().reveal('.lastdesc', { origin: 'bottom', delay: 250, duration: 1000 });
 
         ScrollReveal().reveal('.blog_header', { origin: 'bottom', delay: 100, duration: 800, easing: 'ease' });
 
