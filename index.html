@@ -409,6 +409,17 @@
                 </div>
             </div>
 
+            <!--
+            <div class="scrolling-text">
+                <div class="parallax-title">
+                    React mysql node mongo nextjs gatsby
+                </div>
+                <div class="parallax-title2">
+                    React mysql node mongo nextjs gatsby
+                </div>
+            </div>
+        -->
+
             <div class="contact" id="contact">
                 <span class="contact_desc desc_1">I'm always</span>
                 <span class="contact_desc desc_2">interested</span>
@@ -596,6 +607,31 @@
     <div id="progressbar"></div>
     <div id="scrollpath"></div>
 
+    <!-- Parallax text effect -->
+    <script>
+        let atScroll = false;
+        let parallaxTitle = document.querySelectorAll('.parallax-title')
+        let parallaxTitle2 = document.querySelectorAll('.parallax-title2')
+
+        const scrollProgress = () => {
+            atScroll = true;
+        }
+
+        const raf = () => {
+            if(atScroll) {
+                parallaxTitle.forEach((element, index) => {
+                    element.style.transform = "translateX(" + window.scrollY / 20 + "%)";
+                })
+                parallaxTitle2.forEach((element, index) => {
+                    element.style.transform = "translateX(-" + window.scrollY / 20 + "%)";
+                })
+                atScroll = false;
+            }
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+        window.addEventListener("scroll", scrollProgress)
+    </script>
 
     <!-- Image  -->
     <script src="js/imagesloaded.pkgd.min.js"></script>
