@@ -1883,15 +1883,12 @@ body {
 
 .footer {
   border-top: 2px solid #0074e5;
-  position: absolute;
-  width: 80%;
+  width: 100%;
   padding-left: 5rem;
   padding-bottom: 5rem;
   padding-top: 5rem;
   background-color: #0074e5;
   display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
 }
 
 ul {
